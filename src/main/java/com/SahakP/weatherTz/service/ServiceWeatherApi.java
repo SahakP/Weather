@@ -17,7 +17,8 @@ public class ServiceWeatherApi extends ServiceWeatherBase implements IWeatherSer
         HttpGet httpGet = new HttpGet(URL);
 
         try {
-            URI uri = new URIBuilder(httpGet.getURI()).addParameter("q", city)
+            URI uri = new URIBuilder(httpGet.getURI())
+                    .addParameter("q", city)
                     .addParameter("key", APIKEY)
                     .build();
 
